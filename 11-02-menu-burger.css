@@ -1,0 +1,204 @@
+header{
+  display: flex;
+  justify-content: center;
+
+}
+ul{
+    list-style-type: none;
+    /* pour enleveer les point */
+    padding: 0px;
+    /* pour enlever tout les marges interieur */
+
+}
+
+nav{
+    width: 80%;
+}
+
+a{
+    text-decoration: none;
+    /* permet dire de qu'on ne souligne pas les texte */
+}
+
+@media screen and (min-width :1025px){
+#id-bouton-burger{
+    display: none;
+}
+    ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li{
+    width: 18%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+li:hover{
+    background-color: blueviolet;
+}
+
+nav> ul> li> ul {
+    display: none;
+}
+
+li:hover ul {
+
+    display: block;
+    position: absolute;
+}
+
+ul>li>ul>li {
+    border-radius: 0px 0px 0px 0px;
+    width: 184px;
+}
+
+@media screen and (min-width : 1025px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    #id-bouton-burger {
+display: none;
+    }
+    
+}
+
+span {
+    display: none;
+}
+
+ul {
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+li{
+    width: 18%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 15px 15px 0px 0px;
+    box-shadow: 5px 3px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+li:hover{
+    background-color: blueviolet;
+} 
+
+nav>ul>li>ul {
+    display: none;
+}
+
+li:hover ul{
+    display: block;
+    position: absolute;
+}
+
+ul>li>ul>li {
+    border-radius: 0px 0px 0px 0px;
+    width: 14.4%;
+}
+
+@media screen and (min-width : 481px) and (max-width : 1024px) {
+    [type="checkbox"]{
+        position: absolute;
+        height: 65px;
+        width: 65px;
+        top: 5px;
+        left: 15px;
+        z-index: 2;
+        opacity: 0;
+    }
+
+ /* gestion de l'animation de la croix du menu burger   */
+    
+ #spanHaut {
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    height: 2px;
+    width: 65px;
+    top: 10px;
+ }
+
+ #spanBAS {
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    height: 2px;
+    width: 65px;
+    top: 60px;
+    left: 15px;
+ }
+
+ [type="checkbox"]:checked~#spanHaut{
+    /* n'importe qeul element qui suit checkbox */
+    transition: transform 1s linear;
+    transform: translateY(25px) rotate(45deg);
+  }
+
+  [type="checkbox"]:checked~#spanMillieu{
+    transition: transform 1s linear;
+    transform: scale(0)
+  }
+
+  [type="checkbox"]:checked~#spanBas{
+    transition: transform 1s linear;
+    transform: translateY(-25px) rotate(-45deg);
+  }
+
+
+  [type="checkbox"]:not(:checked)~#spanHaut{
+    transition: transform 1s linear;
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  [type="checkbox"]:not(checked)~#spanMillieu{
+    transition: transform 1s linear;
+    transform: scale(1)
+  }
+
+  [type="checkbox"]:not(checked)~#spanBas{
+    transition: transform 1s linear;
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  nav {
+    width: 200px;
+    padding: 0px;
+    left: -200px;
+    position: relative;
+    top: 70px;
+    left: -200px;
+  }
+
+  ul {
+    width: 200px;
+  }
+
+  li {
+    width: 200px;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+
+  nav>ul>li>ul {
+    display: none;
+  }
+
+}
+
+
+
+}
